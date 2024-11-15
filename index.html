@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerve Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="toggle">
+            <button onclick="setView('Bullish')" class="active" id="Bullish">Bullish</button>
+            <button onclick="setView('Bearish')" id="Bearish">Bearish</button>
+            <button onclick="setView('RangeBound')" id="RangeBound">RangeBound</button>
+            <button onclick="setView('Volatile')" id="Volatile">Volatile</button>
+        </div>
+        <select id="dateDropdown" onchange="renderStrategies()"></select>
+        <div id="strategyCards" class="card-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
+

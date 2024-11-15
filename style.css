@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.container {
+    max-width: 600px;
+    width: 90%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 400px; 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.toggle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #f2f2f2;
+    padding: 5px;
+    background-color: #f2f2f2;
+}
+
+.toggle button {
+    flex: 1;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.toggle button.active {
+    background-color: #007bff;
+    color: white;
+    border-radius: 12px;
+}
+
+.toggle button:first-child {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.toggle button:last-child {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.select-wrapper {
+    position: relative;
+    margin-bottom: 30px; 
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #f2f2f2;
+    border-radius: 12px;
+    font-size: 16px;
+    background-color: white;
+    position: relative;
+    z-index: 10;
+}
+select:focus {
+    outline: none; 
+    border: 1px solid #000; 
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    max-height: 200px; 
+    margin-top: 30px;
+}
+
+.card {
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+.empty-state {
+    color: #777;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+@media (max-width: 480px) {
+    .toggle {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .card-container {
+        max-height: 150px; 
+    }
+}
